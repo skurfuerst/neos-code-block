@@ -23,7 +23,7 @@ class GeshiLanguagesDataSource extends AbstractDataSource
      * @param array $arguments
      * @return array
      */
-    public function getData(NodeInterface $node = null, array $arguments)
+    public function getData(NodeInterface $node = null, array $arguments = [])
     {
         $geshi = new \GeSHi();
         $languages = $geshi->get_supported_languages(true);
