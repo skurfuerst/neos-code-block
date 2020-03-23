@@ -1,4 +1,6 @@
-prototype(Vette.CodeBlock:CodeBlock) {
+prototype(Vette.CodeBlock:CodeBlock) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://Vette.CodeBlock/Private/Templates/NodeTypes/CodeBlock.html'
+    
     formattedCode = Vette.CodeBlock:Geshi {
         code = ${q(node).property('code')}
         language = ${q(node).property('language')}
